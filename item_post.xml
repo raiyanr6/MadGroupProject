@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/card_background"
+    android:layout_marginBottom="8dp">
+
+    <!-- Post header (user avatar, user name) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/userAvatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_user_placeholder"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_background" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/light_text_color" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/postContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Post content goes here..."
+        android:textSize="14sp"
+        android:textColor="@color/light_text_color" />
+
+    <!-- Post media (optional) -->
+    <ImageView
+        android:id="@+id/postMedia"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <!-- React button -->
+    <Button
+        android:id="@+id/btnReact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="React" />
+
+    <!-- Comment Input Field -->
+    <EditText
+        android:id="@+id/commentInputField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Write a comment..."
+        android:inputType="textMultiLine"
+        android:maxLines="2"
+        android:padding="8dp"/>
+
+    <!-- Post Comment button -->
+    <Button
+        android:id="@+id/btnPostComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Post" />
+
+    <!-- RecyclerView for displaying comments -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

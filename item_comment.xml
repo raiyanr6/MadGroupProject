@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/card_background"
+    android:layout_marginBottom="4dp">
+
+    <TextView
+        android:id="@+id/commentUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Placeholder"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/light_text_color" />
+
+    <TextView
+        android:id="@+id/commentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comment content here..."
+        android:textSize="14sp"
+        android:textColor="@color/dark_text_color" />
+</LinearLayout>
